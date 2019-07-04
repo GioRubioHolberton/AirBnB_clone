@@ -42,6 +42,14 @@ class BaseModel_test(unittest.TestCase):
         except BaseException:
             pass
 
+   def test_dictionary_test(self):
+        '''dictionary method'''
+        test_dict = self.insta.to_dict()
+        self.assertEqual(type(test_dict), dict)
+        self.assertTrue('to_dict' in dir(self.insta))
+        self.assertIsInstance(test_dict["created_at"], str)
+        self.assertIsInstance(test_dict["updated_at"], str)
+
     def test_pep8(self):
             """ pep8 testing """
             p8 = pep8.StyleGuide(quiet=True)
