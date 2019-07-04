@@ -11,11 +11,13 @@ from models.base_model import BaseModel
 class BaseModel_test(unittest.TestCase):
     """ testing BaseModel """
 
-    def setUp(self):
+    @classmethod
+    def setUp(cls):
         """ New BaseModel  """
-        self.new_model = BaseModel()
+        cls.new_model = BaseModel()
 
-    def tearDown(self):
+    @classmethod
+    def tearDown(cls):
         """ Delete  """
         del cls.insta
         try:
