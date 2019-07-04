@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import cmd
 
+
 class HBNBCommand(cmd.Cmd):
     'Command interpreter for HBnb Project'
     prompt = "(hbnb) "
