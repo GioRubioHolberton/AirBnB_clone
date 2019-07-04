@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+<<<<<<< HEAD
+
+
+class FileStorage
+=======
 'Management of persistance'
 
 import json
@@ -54,3 +59,4 @@ class FileStorage:
                     self.__objects[key] = values
         except FileNotFoundError:
             pass
+>>>>>>> 693da17d8cdd43fd787f1e17d062564c685f93a9
