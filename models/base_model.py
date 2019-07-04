@@ -9,7 +9,7 @@ class BaseModel:
     'Base class created. It inherates the base data'
 
     def __init__(self, *args, **kwargs):
-        'Constructor for the BaseModel Class.
+        'Constructor for the BaseModel Cls\
         COntains the basics to the future classes'
 
         if (kwargs):
