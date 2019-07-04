@@ -13,6 +13,7 @@ import sys
 import inspect
 import shlex
 
+
 class HBNBCommand(cmd.Cmd):
     'Command interpreter for HBnb Project'
     prompt = "(hbnb) "
