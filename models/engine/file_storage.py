@@ -1,10 +1,4 @@
 #!/usr/bin/python3
-<<<<<<< HEAD
-
-
-class FileStorage
-=======
-'Management of persistance'
 
 import json
 from ..base_model import BaseModel
@@ -15,8 +9,9 @@ from ..place import Place
 from ..review import Review
 from ..state import State
 
+
 class FileStorage:
-    'Class that manages JSON files'
+    'Management of persistance'
 
     __file_path = 'file.json'
 
@@ -59,4 +54,3 @@ class FileStorage:
                     self.__objects[key] = values
         except FileNotFoundError:
             pass
->>>>>>> 693da17d8cdd43fd787f1e17d062564c685f93a9
