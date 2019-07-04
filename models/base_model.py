@@ -4,17 +4,20 @@ from datetime import datetime
 import uuid
 import models
 
+
 class BaseModel:
     'Base class created. It inherates the base data'
 
     def __init__(self, *args, **kwargs):
-        'Constructor for the BaseModel Class. COntains the basics to the future classes'
+        'Constructor for the BaseModel Class.
+        COntains the basics to the future classes'
 
         if (kwargs):
             for keys, values in self.__dict__.items():
                 if keys != '__name__':
                     if keys == "created_at" or keys == "updated_at":
-                        valt = datetime.strptime(values, "%Y-%m-%dT%H:%M:%S.%f")
+                        valt = datetime.strptime(values,
+                                                 "%Y-%m-%dT%H:%M:%S.%f")
                         setattr(self, keys, valt)
                     else:
                         setattr(self, keys, values)
@@ -24,7 +27,8 @@ class BaseModel:
 
     def __str__(self):
         'String representation for instances'
-        return("[{}] ({}) <{}>".format(type(self).__name__, self.id, self.__dict__))
+        return("[{}] ({}) <{}>".format
+               (type(self).__name__, self.id, self.__dict__))
 
     def save(self):
         'Saves date and time for each update'
