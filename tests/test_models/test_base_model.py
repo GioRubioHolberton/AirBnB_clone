@@ -19,7 +19,7 @@ class BaseModel_test(unittest.TestCase):
     @classmethod
     def tearDown(cls):
         """ Delete  """
-        del cls.insta
+        del cls.new_model
         try:
             os.remove('file.json')
         except BaseException:
@@ -28,8 +28,9 @@ class BaseModel_test(unittest.TestCase):
     def test_pep8(self):
             """ pep8 testing """
             p8 = pep8.StyleGuide(quiet=True)
-            asw = pep_8.check_files(['models/base_model.py'])
-            self.assertEqual(answe.total_errors, 0, "Fix Style")
+            asw = p8.check_files(['models/base_model.py'])
+            self.assertEqual(asw.total_errors, 0, "Fix Style")
+
 
 if __name__ == "__main__":
     unittest.main()
