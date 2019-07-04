@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+'Base Model creation'
 
 from datetime import datetime
 import uuid
