@@ -2,7 +2,9 @@
 """
 BaseModel unittests
 """
+import os
 import unittest
+import pep8
 from models.base_model import BaseModel
 
 
