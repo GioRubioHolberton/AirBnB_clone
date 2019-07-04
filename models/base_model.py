@@ -14,7 +14,7 @@ class BaseModel:
 
         if (kwargs):
             for keys, values in self.__dict__.items():
-                if keys != '__name__':
+                if keys != '__class__':
                     if keys == "created_at" or keys == "updated_at":
                         valt = datetime.strptime(values,
                                                  "%Y-%m-%dT%H:%M:%S.%f")
@@ -41,5 +41,5 @@ class BaseModel:
         ob_to_dict = self.__dict__.copy()
         ob_to_dict['created_at'] = self.created_at.isoformat()
         ob_to_dict['updated_at'] = self.updated_at.isoformat()
-        ob_to_dict["__class__"] = self.__class__.__name__
+        ob_to_dict['__class__'] = self.__class__.__name__
         return ob_to_dict
