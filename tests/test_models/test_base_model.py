@@ -16,6 +16,23 @@ class BaseModel_test(unittest.TestCase):
         """ New BaseModel  """
         cls.new_model = BaseModel()
 
+    def test_save(self):
+        """ test for save"""
+        self.insta.save()
+        self.assertNotEqual(self.insta.created_at, self.insta.updated_at)
+        elf.an = self.insta.updated_at
+        self.insta.save()
+        self.des = self.insta.updated_at
+        self.assertIsNot(self.an, self.des)
+
+    def test_created_at_fun_test(self):
+        """ create functionality"""
+        self.assertEqual(datetime, type(self.insta.created_at))
+
+    def test_updated_at_fun_test(self):
+        """ updated functionality"""
+        self.assertEqual(datetime, type(self.insta.updated_at))
+
     @classmethod
     def tearDown(cls):
         """ Delete  """
