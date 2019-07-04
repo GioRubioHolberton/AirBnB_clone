@@ -24,7 +24,7 @@ class FileStorage:
         "Place": Place,
         "Review": Review,
         "State": State
-    }        
+    }
 
     def all(self):
         'Return all values'
@@ -37,7 +37,7 @@ class FileStorage:
 
     def save(self):
         'Serializes __objects to JSON files'
-        with open(self.__file_path, mode = 'w') as file:
+        with open(self.__file_path, mode='w') as file:
             json_dict = {}
             for key, objects in self.__objects.items():
                 json_dict.update({key: objects.to_dict()})
@@ -46,7 +46,7 @@ class FileStorage:
     def reload(self):
         'Deserializes JSON file to __objects dictionary'
         try:
-            with open(self.__file_path, mode = 'r') as jsonf:
+            with open(self.__file_path, mode='r') as jsonf:
                 to_ins = json.load(jsonf)
                 for key, value in to_ins.items():
                     keys = "{}.{}".format(value["__class__"], value["id"])
