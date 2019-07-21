@@ -82,3 +82,20 @@
 .popover li ul li {
 	padding: 3px 0 0 0;
 }
+
+@media only screen and (max-width: 470px) {
+	.filters {
+		width: 90% !important;
+		margin: 0 5%;
+	}
+	.filters h3, .filters h4 {
+    margin-left: 5px;
+    }
+    .filters button {
+    	    margin-right: 20px;
+    	font-size: 15px;
+    }
+    .locations:hover .popover, .amenities:hover .popover {
+    	display: list-item;
+    }
+}

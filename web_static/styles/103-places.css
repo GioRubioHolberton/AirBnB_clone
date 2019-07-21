@@ -83,6 +83,55 @@
 	background-image: url("../images/icon_bath.png");
 }
 
+.places article .amenities, .places article .reviews {
+	width: 100%;
+}
+
+.places article .amenities {
+	height: 22%;
+}
+
+.places article .amenities h2, .places article .reviews h2 {
+  font-size: 17px;
+  text-align: left;
+  margin: 0;
+}
+
+.places article .amenities ul, .places article .reviews ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.places article .reviews ul li {
+	margin-bottom: 15px;
+}
+
+article .amenities ul li {
+    margin: 10px;
+}
+
+article .amenities ul li i {
+  padding-right: 7px;
+}
+
+
+.places article .reviews ul li h3 {
+    margin: 5px 0 0 0;
+}
+
+.places article .reviews ul li p {
+    margin: 5px 0 0 0;
+}
+
 footer {
 	bottom: auto;
+}
+
+@media only screen and (max-width: 470px) {
+	.places article h2 {
+		text-align: left;
+	}
+	.places article {
+		padding: 20px 20px 40px;
+	}
 }
